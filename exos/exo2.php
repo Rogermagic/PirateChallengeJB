@@ -15,6 +15,35 @@
  */
 
 
+//on définit un tableau contenant les infos utiles
+$accounts = ($_SESSION['accounts']);
+echo '<pre>';
+print_r ($accounts);
+echo'<pre>';
+
+//on transforme chaque ligne du tableau en 2 lignes via le /
+foreach ($accounts as $value){
+    //on obtient un nouveau tableau $elements
+    $elements = explode("/", $value);
+    //qu'on retourne pour pouvoir l'utiliser
+    foreach ($elements as $value){
+        //on lance la fonction check pour chaque élément du nveau tableau
+        if (checkAccount($elements[0], $elements[1]) == true){
+            //et si sc'est on on sauvegarde via save
+            saveAccount ($elements[0], $elements[1]);
+        }
+
+}
+}
+
+
+
+
+// on lance la fonction check sur chque element du nouveau tableau
+//
+// }
+
+
 
 /*
  * Une fois la liste obtenue, on va devoir trouver le bon login / mot de passe !
