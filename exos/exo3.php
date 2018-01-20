@@ -1,10 +1,27 @@
 <?php
 /*
- * On doit afficher un formulaire pour s'identifier !
- * Ce formulaire se trouve dans le fichier "templates/exo3.php",
- * tu dois l'inclure ci dessous.
- */
+* On doit afficher un formulaire pour s'identifier !
+* Ce formulaire se trouve dans le fichier "templates/exo3.php",
+* tu dois l'inclure ci dessous.
+*/
+require ('templates/exo3.php');
 
+//on récupère les 3 éléments du formulaire
+$secret = $_POST['secret'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+/*
+* On transmet ces données en un seul paramètre à la fonction "etapeFinale".
+*
+*/
+$data = [
+    'username' =>$username,
+    'password' => $password,
+    'secret' => $secret,
+];
+
+etapeFinale($data);
 
 
 
@@ -21,9 +38,9 @@
  * On doit maintenant récupérer les données du formulaire. Donc
  * on récupère ce qui se trouve dans $_POST (et on récupère bien tout
  * car il n'y a pas juste le login + mot de passe...).
- *
- * On transmet ces données en un seul paramètre à la fonction "etapeFinale".
- *
+ */
+
+ /*
  * ATTENTION : Pour que tout fonctionne bien, il faut placer le code qui
  * récupère les informations du formulaire et qui exécute la fonction "etapeFinale"
  * au bon endroit dans ce fichier... ;) Faut essayer de comprendre pourquoi !

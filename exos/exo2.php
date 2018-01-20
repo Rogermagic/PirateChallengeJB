@@ -17,9 +17,6 @@
 
 //on définit un tableau contenant les infos utiles
 $accounts = ($_SESSION['accounts']);
-echo '<pre>';
-print_r ($accounts);
-echo'<pre>';
 
 //on transforme chaque ligne du tableau en 2 lignes via le /
 foreach ($accounts as $value){

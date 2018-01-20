@@ -14,7 +14,7 @@
       <input
         type="text"
         name="username"
-        value="ici le login"
+        value="<?=$elements[0]?>"
         class="form-control"
         placeholder="Login"
         autocomplete="off"
@@ -26,7 +26,7 @@
       <input
         type="password"
         name="password"
-        value="ici le mot de passe"
+        value="<?=$elements[1]?>"
         class="form-control"
         placeholder="Password"
         autocomplete="off"
